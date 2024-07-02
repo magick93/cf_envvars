@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
+  import { PUBLIC_TEST_ENV_VAR } from '$env/static/public';
   import Meta from '$lib/components/Meta.svelte';
   import Comments from '$lib/features/comment/Comments.svelte';
   import { commentStore } from '$lib/features/comment/commentStore.svelte';
@@ -20,6 +21,8 @@
     commentStore.fetchComments();
   });
 </script>
+
+<h3>The env var is {PUBLIC_TEST_ENV_VAR}</h3>
 
 <Meta {...meta} />
 
