@@ -1,0 +1,14 @@
+{
+  "name": "backend",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pull": "supabase db pull --local --schema public,auth,storage",
+    "start": "supabase start",
+    "stop": "supabase stop"
+  },
+  "devDependencies": {
+    "supabase": "^1.172.2"
+  }
+}

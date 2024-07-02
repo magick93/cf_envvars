@@ -1,0 +1,38 @@
+{
+  "name": "webapp-template",
+  "version": "2.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare": "husky && ./commands/init.sh",
+    "build": "turbo run build",
+    "lint:cspell": "cspell --exclude \"apps/**/*\" --exclude \"packages/**/*\" \"**/*\"",
+    "lint:prettier": "prettier . --check --ignore-path=.prettierignore.root",
+    "lint:packages": "turbo run lint",
+    "lint": "concurrently pnpm:lint:*",
+    "test": "turbo run test",
+    "format:cspell": "./commands/format-project-words.sh",
+    "format:prettier": "prettier . --write --ignore-path=.prettierignore.root",
+    "format:packages": "turbo run format",
+    "format": "concurrently pnpm:format:*"
+  },
+  "devDependencies": {
+    "@markuplint/svelte-parser": "^4.6.3",
+    "@repo/eslint-config": "workspace:*",
+    "concurrently": "^8.2.2",
+    "cspell": "^8.8.4",
+    "eslint": "^9.4.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
+    "markuplint": "^4.9.0",
+    "prettier": "^3.3.1",
+    "prettier-plugin-svelte": "^3.2.4",
+    "prettier-plugin-tailwindcss": "^0.6.1",
+    "turbo": "^1.13.4"
+  },
+  "packageManager": "pnpm@9.1.2+sha256.19c17528f9ca20bd442e4ca42f00f1b9808a9cb419383cd04ba32ef19322aba7",
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8"
+  }
+}
