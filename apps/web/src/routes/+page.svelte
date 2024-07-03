@@ -3,6 +3,8 @@
 
   import { PUBLIC_TEST_ENV_VAR } from '$env/static/public';
 
+  export let data;
+
   // import Comments from '$lib/features/comment/Comments.svelte';
   // import { commentStore } from '$lib/features/comment/commentStore.svelte';
   // import { userStore } from '$lib/features/user/userStore.svelte';
@@ -23,3 +25,4 @@
 </script>
 
 <h3>The env var is {PUBLIC_TEST_ENV_VAR}</h3>
+<p>private env var is {data.envvar}</p>
