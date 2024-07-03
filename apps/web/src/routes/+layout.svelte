@@ -3,9 +3,7 @@
 
   import type { Snippet } from 'svelte';
 
-  import OnAuthStateChange from '$lib/features/user/OnAuthStateChange.svelte';
-
-  import Footer from './Footer.svelte';
+import Footer from './Footer.svelte';
   import HeaderNavigation from './HeaderNavigation.svelte';
 
   let {
@@ -15,7 +13,7 @@
   } = $props();
 </script>
 
-<OnAuthStateChange />
+<!-- <OnAuthStateChange /> -->
 
 <div class="h-screen bg-gray-100 text-zinc-900">
   <div class="flex h-full flex-col">
