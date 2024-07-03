@@ -30,6 +30,8 @@
     "tailwind-variants": "^0.2.1"
   },
   "devDependencies": {
+    "@melt-ui/pp": "^0.3.2",
+    "@melt-ui/svelte": "^0.83.0",
     "@repo/eslint-config": "workspace:*",
     "@sveltejs/adapter-auto": "^3.2.1",
     "@sveltejs/kit": "^2.5.10",
